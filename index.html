@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadece İrem İçin;</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bg-music" src="arka-plan.mp3" loop preload="auto"></audio>
+    <audio id="sound-punch" src="yumruk.mp3" preload="auto"></audio>
+    <audio id="sound-tomato" src="domates.mp3" preload="auto"></audio>
+    <audio id="sound-love" src="sevgi.mp3" preload="auto"></audio>
+
+    <div id="loading-screen">
+        <h1 class="pixel-title">Stres Atma Başlıyor...</h1>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+    </div>
+
+    <div id="chapter-overlay" class="hidden">
+        <h2 id="overlay-text"></h2>
+    </div>
+
+    <div id="final-screen" class="hidden">
+        <div class="final-box">
+            <h1 class="pixel-title">SENİ ÇOK SEVİYORUM SEVGİLİM..</h1>
+            <p style="font-size: 40px;">💖💖💖</p>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <h1 class="pixel-title">SADECE İREM İÇİN;</h1>
+        <p id="chapter-title" class="chapter-text">HAZIRLAN...</p>
+
+        <div id="character-stage" onclick="useItem()">
+            <img src="yigithan-yuz-0.png" id="face">
+        </div>
+
+        <h2 id="name">Yiğithan</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

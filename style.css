@@ -1,0 +1,69 @@
+body { 
+    background-color: #2e1a47; 
+    color: white; 
+    font-family: 'VT323', sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    overflow: hidden;
+}
+
+#game-container { text-align: center; width: 360px; position: relative; z-index: 5; }
+
+.pixel-title { 
+    font-size: 38px; 
+    color: #f1c40f; 
+    text-shadow: 4px 4px #c0392b; 
+    margin-bottom: 5px; 
+}
+
+.chapter-text {
+    font-size: 20px;
+    color: #f1c40f;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 5px 15px;
+    border: 3px solid #f1c40f;
+}
+
+#character-stage { 
+    position: relative; width: 300px; height: 400px; 
+    margin: 0 auto; border: 6px solid #f1c40f; 
+    background: #1a0f2b; overflow: hidden; 
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+#face { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+
+/* Final Ekranı */
+#final-screen {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(46, 26, 71, 0.95);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2000; animation: fadeIn 2s ease-in;
+}
+
+.final-box {
+    text-align: center; padding: 30px; border: 8px solid #f1c40f;
+    background: #1a0f2b; box-shadow: 15px 15px 0px #c0392b;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Diğer her şey aynı kalabilir... */
+#loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1a0f2b; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; transition: opacity 0.8s; }
+.progress-bar { width: 200px; height: 20px; border: 3px solid #f1c40f; margin-top: 20px; }
+.progress-fill { width: 0%; height: 100%; background: #e74c3c; animation: load 2.5s forwards linear; }
+@keyframes load { to { width: 100%; } }
+#chapter-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; z-index: 900; transition: opacity 0.4s; }
+#overlay-text { font-size: 35px; color: #f1c40f; text-shadow: 3px 3px #c0392b; text-align: center; }
+.hidden { display: none !important; }
+.projectile { position: absolute; font-size: 80px; pointer-events: none; z-index: 100; transition: transform 0.15s ease-out, opacity 0.1s; }
+.tetris-heart { position: absolute; font-size: 35px; color: #ff4757; text-shadow: 2px 2px 0px #000; pointer-events: none; z-index: 50; }
+.shake { animation: shake 0.15s; }
+@keyframes shake { 0% { transform: translate(3px, 3px); } 50% { transform: translate(-3px, -3px); } 100% { transform: translate(3px, 3px); } }
+#name { font-size: 35px; margin-top: 15px; color: #f1c40f; }
